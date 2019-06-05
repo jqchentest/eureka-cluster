@@ -1,0 +1,10 @@
+server:
+  port: 8862
+eureka:
+  instance:
+    hostname: ceureka2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://ceureka1:8861/eureka

@@ -1,0 +1,22 @@
+version: "3"    
+services:
+ ceureka1:
+  image:  eureka:1.0
+  networks:
+   - eureka-net
+  ports:
+   - "8861:8861"
+  environment:
+   - spring.profiles.active=server1
+ ceureka2:
+  image: eureka:1.0
+  networks:
+   - eureka-net
+  ports:
+   - "8862:8862"
+  environment:
+   - spring.profiles.active=server2
+
+networks:
+ eureka-net:
+  driver: overlay

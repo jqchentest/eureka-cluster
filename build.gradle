@@ -42,7 +42,7 @@ dependencyManagement {
 }
 
 task buildDocker(type: Docker, dependsOn: build) {
-    tag = "eurake"
+    tag = "eureka"
     dockerfile = file('src/main/docker/Dockerfile')
     doFirst {
         copy {
